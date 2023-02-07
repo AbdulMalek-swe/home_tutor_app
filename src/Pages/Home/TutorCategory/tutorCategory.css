@@ -1,0 +1,4 @@
+.category-div:hover .category-text{
+    transform: translateX(12px);
+    transition: transform .5s ease-in-out;
+}

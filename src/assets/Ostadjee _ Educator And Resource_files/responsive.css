@@ -1,0 +1,134 @@
+
+
+
+
+@media screen and (max-width: 768px) {
+    .subject-items-area .subject-item {
+        flex: 0 0 48%;
+        margin-bottom: 3%;
+    }
+    .carousel-inner::after {
+        position: absolute;
+        background: rgb(0 0 0 / 50%);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .banner-area .carousel-item::after {
+        background: url(images/banner/tution-man-single.png) no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+      }
+    .my-carousel-caption {
+        max-width: 280px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .my-carousel-caption a {
+        padding: 0.175rem 0.45rem;
+        white-space: nowrap;
+    }
+    .my-carousel-caption a:first-child{
+        margin-bottom: 10px;
+    }
+    .service-items-area {
+        padding: 15px;
+        row-gap: 10px;
+    }
+    .service-item {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+      }
+    .service-item .service-text {
+        font-size: 15px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 576px){
+
+    p,button{
+        font-size: 15px !important;
+    }
+
+    .service-items-area {
+        padding: 14px 20px;
+        row-gap: 10px;
+      }
+
+    .service-item i {
+        font-size: 12px;
+        padding: 5px !important;
+      }
+      .service-item .service-text {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      
+
+    /*
+    .banner-area .carousel-item{
+        position: relative;
+    }
+    .banner-area .carousel-item:after {
+        position: absolute;
+        display: block;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgb(0 0 0 / 50%);
+    } */
+
+
+    
+    .banner-area .carousel-item img {
+        min-height: 380px;
+    }
+    .our-tutor-slider-area {
+        flex-direction: column;
+    }
+    .our-tutor-slider-area > div{
+        margin-bottom: 40px;
+    }
+    .mass-media-items-area {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .statistics-main {
+        row-gap: 10px;
+    }
+    .statistics-item{
+        flex: 0 0 48%;
+    }
+    .video-learning-items .course-item {
+        flex: 0 0 100%;
+    }
+    .book-area {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

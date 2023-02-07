@@ -1,0 +1,510 @@
+
+
+
+/*********** Global Styles == Start ***********/
+img{
+    max-width: 100%;
+}
+.bg-primary{
+    background-color: #E86103 !important;
+}
+.bg-secondary{
+    background-color: #CF288F !important;
+}
+.text-primary{
+    color: #E86103 !important;
+}
+.text-secondary{
+    color: #CF288F !important;
+}
+.text-info{
+    color: #0998C9 !important;
+}
+
+
+.btn-primary{
+    background-color: #E86103 !important;
+    border-color: #E86103 !important;
+}
+.btn-primary:hover,
+.btn-outline-primary:hover{
+    background-color: #c55708 !important;
+    border-color: #c55708 !important;
+}
+.btn-outline-primary:hover{
+    color: #ffffff !important;
+}
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-outline-primary:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+}
+.btn-outline-primary {
+    color: #E86103 !important;
+    border-color: #E86103 !important;
+}
+
+
+
+
+
+.btn-secondary{
+    background-color: #CF288F !important;
+    border-color: #CF288F !important;
+}
+.btn-secondary:hover{
+    background-color: #b6237d !important;
+    border-color: #b6237d !important;
+}
+
+.btn-info{
+    background-color: #0998C9;
+    border-color: #0998C9 !important;
+}
+.btn-info:hover{
+    background-color: #0889b4 !important;
+    border-color: #0889b4 !important;
+}
+.form-control:focus {
+    border-color: #E86103 !important;
+    box-shadow: 0 0 0 0.2rem rgb(232 97 3 / 20%) !important;
+}
+
+.section-pt2x {
+    padding-top: 10%;
+}
+.section-py {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.section-pb {
+    padding-bottom: 5%;
+}
+.section-pt {
+    padding-top: 5%;
+}
+
+.heading-bottom-border{
+    position: relative;
+}
+.heading-bottom-border hr:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #e86103;
+    margin-top: -3px;
+}
+.heading-bottom-border h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.flex-between-gap1-wrap {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1%;
+    flex-wrap: wrap;
+}
+/*********** Global Styles == End ***********/
+
+
+/*********** Banner Area == Start ***********/
+.banner-area {
+    position: relative;
+    background-image: linear-gradient(to right, #293FAF , #5470FF);
+}
+/*
+.banner-area:after {
+    position: absolute;
+    content: "";
+    background: rgb(0 0 0 / 60%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
+.banner-area .carousel-item{
+    height: 500px !important;
+    position: relative;
+}
+.banner-area .carousel-item::after {
+    position: absolute;
+    content: "";
+    background: url(images/banner/tuition-man.png) no-repeat;
+    background-position: 96% bottom;
+    background-size: 54%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+
+
+.banner-area .carousel-item img{
+    object-fit: cover;
+}
+.my-carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 4%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    max-width: 375px;
+}
+.my-carousel-caption p {
+    line-height: 1.6;
+    margin-top: 6%;
+    margin-bottom: 8%;
+}
+.my-carousel-caption h3 {
+    font-size: 24px;
+}
+.my-carousel-caption a:first-child{
+    margin-right: 7px;
+}
+/*********** Banner Area == End ***********/
+
+
+
+
+/*********** Service Area == Start ***********/
+.service-items-area {
+    background-color: #ffffff;
+    z-index: 100;
+    border-radius: 0 0 8px 8px;
+    padding: 30px 0;
+    box-shadow: 0 0 8px -3px rgb(41 63 176);
+  }
+/* .service-item > div{
+    border-bottom: 2px solid #e86103;
+} */
+
+.service-item i{
+    border: 1px solid rgba(41, 63, 176, 0.3);
+}
+.subject-item-card-icon{
+    font-size: 40px;
+}
+/*********** Service Area == End ***********/
+
+
+
+/*********** Subject Area == Start ***********/
+
+.subject-items-area .subject-item {
+    flex: 0 0 15%;
+}
+.subject-item-card,
+.book-item-card{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.subject-item-card .fa-angle-right{
+    font-size: 14px;
+}
+.subject-item-card-link {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+  .subject-item-card-icon{
+    display: none;
+  }
+  .subject-item-card-link span,
+  .subject-item-card-link i {
+    transition: 0.3s;
+  }
+  .subject-item-card-link:hover i,
+  .subject-item-card-link:hover span {
+    transform: translateX(10px);
+  }
+/*********** Subject Area == End ***********/
+
+
+
+
+/*********** Our Tutor Area == Start ***********/
+.our-tutor-slider-area {
+    display: flex;
+    column-gap: 1%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.our-tutor-slider-one,
+.our-tutor-slider-two {
+    flex: 0 0 49%;
+    flex-wrap: wrap;
+}
+.our-tutor-slider-area iframe{
+    min-height: 300px;
+    width: 100%;
+}
+.our-tutor-slider-area .carousel-indicators {
+    bottom: -40px !important;
+}
+.our-tutor-slider-area .carousel-indicators li {
+    height: 4px !important;
+}
+/*********** Our Tutor Area == End ***********/
+
+
+
+
+/*********** Founder Area == Start ***********/
+
+.founder-intro-video-area iframe{
+    min-height: 310px;
+    width: 100%;
+}
+.founder-area .heading-bottom-border h3{
+    line-height: 1.5;
+}
+.founder-area .para-title h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/*********** Founder Area == End ***********/
+
+
+
+
+
+/*********** Mass Media Area == Start ***********/
+.mass-media-area {
+    background: #F4F5FA;
+}
+/* .mass-media-item {
+    flex: 0 0 32%;
+} */
+
+/*********** Mass Media Area == End ***********/
+
+
+
+
+/*********** Investor && Partner Area == Start ***********/
+.subject-slider-item,
+.investor-slider-item,
+.partner-slider-item,
+.mass-media-item,
+.book-item,
+.course-item {
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.subject-slider .slick-slide,
+.investor-slider .slick-slide,
+.partner-slider .slick-slide,
+.mass-media-slider .slick-slide,
+.book-area-slider .slick-slide,
+.popular-course-slider .slick-slide {
+    margin: 0 10px;
+}
+.subject-slider .slick-list,
+.investor-slider .slick-list,
+.partner-slider .slick-list,
+.mass-media-slider .slick-list,
+.book-area-slider .slick-list,
+.popular-course-slider .slick-list {
+    margin: 0 -10px !important;
+}
+/*********** Investor && Partner Area == End ***********/
+
+
+
+
+
+/*********** Statistics Area == Start ***********/
+.statistics-main {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    justify-content: space-between;
+}
+
+.statistics-item {
+    flex: 0 0 23%;
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+    /* box-shadow: 1px 2px 4px #000000; */
+    padding: 10px 12px;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+}
+
+.statistics-item img {
+    max-width: 60px;
+}
+/*********** Statistics Area == End ***********/
+
+
+
+
+/*********** Book Area == Start ***********/
+/* .book-area-items{
+    row-gap: 15px;
+    column-gap: 8px;
+}
+.book-item{
+    flex: 0 0 16%;
+} */
+.book-item-card {
+    position: relative;
+}
+
+.book-item-card:hover:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: rgb(255 255 255 / 70%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.book-item-card > div{
+    position: relative;
+}
+.book-item-card .transparent-area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    z-index: 2;
+    display: none;
+}
+.book-item-card .transparent-area a{
+    white-space: nowrap;
+}
+.book-item-card:hover .transparent-area{
+    display: flex;
+}
+
+
+/* .book-item-card > div .addToCart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* .book-item-card .viewDetails {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+} */
+
+/*********** Book Area == End ***********/
+
+
+
+
+/*********** Course Area == Start ***********/
+
+/* For Homepage */
+.popular-course-title {
+    font-size: 20px;
+}
+.popular-course-description {
+    font-size: 14px;
+}
+.popular-course-price{
+    font-weight: 500;
+}
+.course-item-card-text{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* For Video Learning Page*/
+.video-learning-items {
+    row-gap: 20px;
+    column-gap: 8px;
+}
+.video-learning-items .course-item{
+    flex: 0 0 32%;
+}
+.course-item {
+    transition: 0.3s;
+    cursor: pointer;
+}
+.video-learning-items .course-item:hover {
+    transform: translateY(-8px);
+}
+
+
+.search-items-and-forms {
+    row-gap: 15px;
+  }
+/* .search-course-area{} */
+.search-board-items{
+  display: flex;
+  column-gap: 30px;
+}
+.search-board-items a,
+.search-private-items a{
+  font-size: 15px;
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #000000;
+}
+.search-board-items a.active,
+.search-board-items a:hover {
+    border-bottom: 2px solid #E86103;
+    color: #E86103 !important;
+}
+.course-search-form input,
+.course-search-form select {
+    font-size: 15px;
+}
+/* .course-search-form{} */
+.course-search-form form {
+    column-gap: 15px;
+  }
+/* .search-course-input{}
+.search-course-input input{}
+
+.course-all-sectors{}
+.course-all-sectors select{}
+
+.course-all-subjects{}
+.course-all-subjects select{} */
+
+.search-private-items {
+  column-gap: 15px;
+  row-gap: 10px;
+}
+.search-private-items a{
+  background: #e5e7eb;
+  border-radius: 25px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+}
+.search-private-items a:hover {
+    background: transparent;
+    border: 1px solid #E86103;
+    color: #E86103;
+}
+
+/*********** Course Area == End ***********/
+
+
+

@@ -1,0 +1,18 @@
+  .middle {
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .overlayContainer:hover .image {
+    opacity: 0.3;
+  }
+  .overlayContainer:hover .middle {
+    opacity: 1;
+  }
+  .t{
+    color: #283eb64d;
+  }
+  
+  
