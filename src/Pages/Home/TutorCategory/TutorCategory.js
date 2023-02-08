@@ -1,12 +1,12 @@
-import React  from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import { IoIosArrowForward } from 'react-icons/io'
 import './tutorCategory.css'
 const data = [
-   1,2,3,4,5,6,7,8,9,0
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 ]
 const TutorCategory = () => {
-   
+
     var settings = {
         infinite: false,
         speed: 500,
@@ -43,22 +43,22 @@ const TutorCategory = () => {
     };
     return (
         <div className='container mx-auto'>
-           <div className =' mx-2 border-b-2 mb-2'>
-           <h2 className='mb-2 '> আমাদের টিউটরদের ক্যাটাগরি
-            
-            </h2>
-            <span className=' border-b-2   border-[#e7582a] w-20 block' ></span>
-           </div>
+            <div className=' mx-2 border-b-2 mb-2'>
+                <h2 className='mb-2 '> আমাদের টিউটরদের ক্যাটাগরি
+
+                </h2>
+                <span className=' border-b-2   border-[#e7582a] w-20 block' ></span>
+            </div>
             <Slider   {...settings}    >
                 {
-                    data.map((item,i)=>  <div  >
-                     <div className='mx-2 h-20 bg-[#e7582a] rounded text-center  flex items-center justify-center opacity-90 cursor-pointer category-div hover:opacity-80'>
-                        <p className='text-white category-text'>this is my bad luch</p>
-                        <IoIosArrowForward className='text-white category-text'/>
-                     </div>
-                  </div>)
+                    data.map((item, i) => <div  >
+                        <div className='mx-2 h-20 bg-[#e7582a] rounded text-center  flex items-center justify-center opacity-90 cursor-pointer category-div hover:opacity-80'>
+                            <p className='text-white category-text'>this is my bad luch</p>
+                            <IoIosArrowForward className='text-white category-text' />
+                        </div>
+                    </div>)
                 }
-               
+
             </Slider>
         </div>
     );
