@@ -3,6 +3,7 @@ import { AiFillCaretDown,AiFillYoutube,AiFillFacebook,AiFillDashboard } from 're
 import { GiPhone} from 'react-icons/gi';
 import { FaUserAlt,FaEdit} from 'react-icons/fa';
 import { MdOutlineLogout} from 'react-icons/md';
+import { Link } from 'react-router-dom';
 const UpNavbar = () => {
     return (
         <div className='bg-indigo-900 min-h-[50px]    '>
@@ -28,12 +29,14 @@ const UpNavbar = () => {
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-1 p-2 shadow bg-base-100 rounded-box   w-40">
-                                <li>
+                              <Link to="tutor/dashboard">
+                              <li>
                                     <a>
                                        <span><AiFillDashboard/></span>
                                        <span>Dashboard</span>
                                     </a>
                                 </li>
+                              </Link>
                                 <li>
                                     <a>
                                        <span><FaUserAlt/></span>

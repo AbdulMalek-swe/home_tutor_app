@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img from '../../../../assets/1663886208-ostadjee main logo Blue.png'
 const DownMenubar = () => {
     return (
@@ -15,9 +16,11 @@ const DownMenubar = () => {
   </div>
   <div className="  hidden md:flex">
     <ul className="menu menu-horizontal px-1 list-none">
-      <li className='font-medium text-indigo-900 hover:underline hover:bg-indigo-100 list-none'><a>HOME</a></li>
-      <li className='font-medium text-indigo-900 hover:underline'><a>BLOG</a></li>
+     <Link to="/"> <li className='font-medium text-indigo-900 hover:underline hover:bg-indigo-100 list-none'><a>HOME</a></li></Link>
+      <Link to="/blog">   <li className='font-medium text-indigo-900 hover:underline'><a>BLOG</a></li></Link>
+      <Link to="/howitworks">
       <li className='font-medium text-indigo-900 hover:underline'><a>HOW IT WORKS</a></li>
+      </Link>
     </ul>
   </div>
 </div>

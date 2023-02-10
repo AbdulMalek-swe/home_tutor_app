@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 import img from '../../../assets/grameenphone.jpg'
-const data = [1, 2, 3, 4,5,6]
-const Media = () => {
+const data = [1, 2, 3, 4,4,56,7]
+const Partner = () => {
     var settings = {
         infinite: false,
         speed: 200,
@@ -23,7 +23,7 @@ const Media = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     initialSlide: 2
                 }
@@ -31,7 +31,7 @@ const Media = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
@@ -42,22 +42,16 @@ const Media = () => {
             <div className='container mx-auto'>
                 <div className=' mx-2 border-b-2 mb-2'>
                     <h2 className='mb-2 '>
-                    গণমাধ্যমে Ostadjee.com
+                    আমাদের পার্টনার
                     </h2>
                     <span className=' border-b-2   border-[#e7582a] w-20 block' ></span>
-                   
+                     
                 </div>
-                <h5 className='my-4 mx-2'>দৈনিক সংবাদপত্র, টেলিভিশন চ্যানেলসহ বিভিন্ন গনমাধ্যমে Ostadjee সম্পর্কে প্রকাশিত বিভিন্ন সংবাদ ও প্রতিবেদনসমুহ</h5>
                 <Slider   {...settings}    >
                     {
-                        data.map((item, i) => <div  >
-                            <div className="bg-white mx-2 rounded-lg shadow-lg text-center border-2 ">
-                                <img src={img} alt="Image" className="w-full rounded-lg" />
-                                <div className='  '>
-                                    <button className=" w-full focus:outline-none focus:border-t-2 focus:border-blue-500 py-5      ">
-                                       Ostadjee handle it
-                                    </button>
-                                </div>
+                        data.map((item, i) => <div  className='item-center'>
+                            <div className="w-44 h-44  mx-2">
+                                <img src={img} alt="Image" className="w-9/12 md:w-full rounded-lg border-2" />
                             </div>
                         </div>
                         )
@@ -69,4 +63,4 @@ const Media = () => {
     );
 };
 
-export default Media;
+export default Partner;
