@@ -5,7 +5,7 @@ import SearchJobList from './JobList/SearchJobList';
 
 const DashboardHome = () => {
   return (
-    <div className='absolute  lg:left-[350px] left-[10px] top-[52px] -z-0'>
+    <div className='absolute  lg:left-[350px] left-[10px] lg:top-[150px] top-[170px] '>
       <div>
         <div>
           <div className="alert  bg-[#cce5ff]  rounded  ">
@@ -24,7 +24,7 @@ const DashboardHome = () => {
                 <p>UPDATE</p>
               </div>
               <div className=' '>
-                <AiFillEdit className='text-xl' />
+                <AiFillEdit className='text-xl' /> 
               </div>
             </div>
           </Link>
@@ -68,7 +68,7 @@ const DashboardHome = () => {
         </div>
         
       </div>
-      <SearchJobList/>
+        <SearchJobList/>
     </div>
   );
 };
