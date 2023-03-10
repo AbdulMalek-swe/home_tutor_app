@@ -7,11 +7,12 @@ import TutorProfile from "../Pages/Dashboard/TutorProfileDashboard/TutorProfile"
 import Home from "../Pages/Home/Home/Home";
 import HowWork from "../Pages/HowWorkThisSIte/HowWork";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome"
+import AccountCreator from "../Pages/UserForm/AccountCreator/AccountCreator";
+import StudentRegister from "../Pages/UserForm/Register/StudentRegister/StudentRegister";
 const routes = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
-
         children: [
             {
                 path: '/',
@@ -28,7 +29,16 @@ const routes = createBrowserRouter([
                 path: "howitworks",
                 element: <HowWork />
             },
-            
+            {
+                path:"register",
+                element:<AccountCreator/>,
+                children:[
+                    {
+                        path:":type",
+                        element:<StudentRegister/>
+                    }
+                ]
+            }
              
         ]
     },
