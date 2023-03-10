@@ -19,6 +19,12 @@ const DownMenubar = () => {
      <Link to="/"> <li className='font-medium text-indigo-900 hover:underline hover:bg-indigo-100 list-none'><a>HOME</a></li></Link>
       <Link to="/blog">   <li className='font-medium text-indigo-900 hover:underline'><a>BLOG</a></li></Link>
       <Link to="/howitworks">
+      <li className='font-medium text-indigo-900 hover:underline'><a>PREMIUM TUTORS  </a></li>
+      </Link>
+      <Link to="/howitworks">
+      <li className='font-medium text-indigo-900 hover:underline'><a>  REQUEST FOR A TUTOR</a></li>
+      </Link>
+      <Link to="/howitworks">
       <li className='font-medium text-indigo-900 hover:underline'><a>HOW IT WORKS</a></li>
       </Link>
     </ul>

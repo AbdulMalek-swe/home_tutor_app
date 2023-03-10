@@ -1,30 +1,31 @@
 import axios from 'axios';
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
-import '../Register.css'
-import { inputClass, labelClass } from '../RegisterType';
-const StudentRegister = () => {
-    const { register, handleSubmit } = useForm();
+import './Register.css'
+import { inputClass, labelClass } from './RegisterType';
+const Register = () => {
+    const { register, handleSubmit, control } = useForm();
+    const term = useWatch({ control, name: "term" });
     const onSubmit = data => {
         delete data.term;
-             console.log(data);
-             const now = new Date();
-const isoString = now.toISOString();
-        axios.post("http://20.127.2.107:8080/v1/user/register",{...data, join_date:"2022-02-19T14:21:00+0200"})
-        .then(res=>{
-            console.log(res);
-        })
-        .catch(err=>{
-            console.log(err.message);
-        })
+        axios.post("http://20.127.2.107:8080/v1/user/register", { ...data, join_date: "2022-02-19T14:21:00+0200" })
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
     }
     return (
         <div className='pt-[120px]'>
             <div className="backgrounds">
                 <div className='flex items-center justify-center'>
-                    <div className='bg-white'>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className='bg-white   my-6'>
+                        <h1 className='text-center bg-[#0F2182] p-2 text-[#fff]'>Register</h1>
+                        <form onSubmit={handleSubmit(onSubmit)} className="p-6">
+
                             <div className="relative my-6">
                                 <input id="id-l01" type="text" required name="message" placeholder="task message" className={inputClass} {...register("username")}
                                 />
@@ -45,8 +46,8 @@ const isoString = now.toISOString();
                                 <input id="id-l03" type="email" required name="message" placeholder=" " className={inputClass} {...register("email")}
                                 />
                                 <label htmlFor="id-l03" className={labelClass}
-                                > 
-                                Email *
+                                >
+                                    Email *
                                 </label>
                             </div>
                             <div className="relative my-6">
@@ -58,15 +59,23 @@ const isoString = now.toISOString();
                                 </label>
                             </div>
                             <div className='flex  w-full max-w-xs'>
-                <input
-                  className='mr-3'
-                  type='checkbox'
-                  {...register("term")}
-                  id='terms'
-                />
-                <label for='terms'>I agree to terms and conditions</label>
-              </div>
-                            <input type="submit" />
+                                <input
+                                    className='mr-3'
+                                    type='checkbox'
+                                    {...register("term")}
+                                    id='terms'
+                                />
+                                <label for='terms'> I agree to the Terms of Use and Privacy Policy</label>
+                            </div>
+                         
+                                      <button disabled={term?false:true} type="submit"   className={` ${term?'bg-[#0F2182]':'bg-[#102493ab]'} p-2 text-[#fff] my-3  text-center w-full `}>Register</button>
+                               
+                                      <div className='text-center'>
+                     <span  className="text-[#E86103] ">Have An Account ?</span>
+                       <Link to="/login">
+                           <span  type="submit" className= '  p-2   my-3  text-center  hover:underline  text-[#007bff]'>Login Here</span>
+                           </Link>
+                     </div>
                         </form>
                     </div>
                 </div>
@@ -75,4 +84,4 @@ const isoString = now.toISOString();
     );
 };
 
-export default StudentRegister;
+export default Register;

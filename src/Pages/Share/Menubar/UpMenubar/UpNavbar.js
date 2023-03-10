@@ -24,12 +24,15 @@ const UpNavbar = () => {
                             <li className='mr-5 text-white list-none'><a href='https://www.youtube.com/c/ZuliasCizarTalukdar' target="_blank"><AiFillYoutube /></a></li>
 
                         </ul>
-                        <div className='mt-1 flex'> <button className='bg-white mx-1 px-1 flex items-center justify-center'><BiLogIn/> <span className='hover:underline'>Login</span></button>
+                        <div className='mt-1 flex'> 
+                        <Link to="/login">
+                        <button className='bg-white mx-1 px-1 flex items-center justify-center'><BiLogIn/> <span className='hover:underline'>Login</span></button>
+                        </Link>
                         <Link to="/register">
                         <button className='bg-white mx-1 px-1 flex items-center justify-center  bg-orange-400 text-white'><FaRegEdit/> <span className='hover:underline  '>Register</span></button>
                         </Link>
                       </div>
-                        {/* <div className="dropdown dropdown-end">
+                        <div className="dropdown dropdown-end">
                             <label tabIndex={0}  >
                                 <div className='flex cursor-pointer '>
                                     <span className='font-medium text-white'> My Account</span><AiFillCaretDown className='mt-1 font-medium text-white' />
@@ -66,7 +69,7 @@ const UpNavbar = () => {
                                 </li>
 
                             </ul>  
-                         </div> */}
+                         </div>  
                     </div>
                 </div>
             </div>

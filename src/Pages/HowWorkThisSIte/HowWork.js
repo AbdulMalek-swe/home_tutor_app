@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { GiTeacher } from 'react-icons/gi';
+import { GiTeacher  } from 'react-icons/gi';
+import {  RiArrowDropRightLine} from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 const HowWork = () => {
     const [content, setContent] = useState('tutor');
@@ -22,46 +23,36 @@ const HowWork = () => {
                             </h2>
                             <span className=' border-b-2   border-[#e7582a] w-16 block' ></span></div>
                         {content === 'tutor' && (
-                            <div className='border'>
-                                <div className="collapse">
-                                    <input type="checkbox" className="peer" />
-                                    <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        Click me to show/hide content
-                                    </div>
-                                    <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        <p>hello</p>
-                                    </div>
-                                </div><div className="collapse">
-                                    <input type="checkbox" className="peer" />
-                                    <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        Click me to show/hide content
-                                    </div>
-                                    <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        <p>hello</p>
-                                    </div>
-                                </div>
+                             <div className='border'>
+                             <div className="collapse">
+                                 <input type="checkbox" className="peer" />
+                                
+                                 <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content flex items-center">
+                                 <RiArrowDropRightLine className='text-3xl'/>
+                                     <span>Click me to show/hide content</span>
+                                 </div>
+                                 <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                                     <p>hello dear tutor</p>
+                                 </div>
+                             </div>
+                             
 
-                            </div>
+                         </div>
                         )}
                         {content === 'stuparent' && (
                             <div className='border'>
                                 <div className="collapse">
                                     <input type="checkbox" className="peer" />
-                                    <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        Click me to show/hide content
+                                   
+                                    <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content flex items-center">
+                                    <RiArrowDropRightLine className='text-3xl'/>
+                                        <span>Click me to show/hide content</span>
                                     </div>
                                     <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        <p>hello</p>
-                                    </div>
-                                </div><div className="collapse">
-                                    <input type="checkbox" className="peer" />
-                                    <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        Click me to show/hide content
-                                    </div>
-                                    <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                        <p>hello</p>
+                                        <p>hello dear student</p>
                                     </div>
                                 </div>
+                                
 
                             </div>
                         )}

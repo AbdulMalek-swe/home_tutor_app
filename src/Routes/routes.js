@@ -7,8 +7,9 @@ import TutorProfile from "../Pages/Dashboard/TutorProfileDashboard/TutorProfile"
 import Home from "../Pages/Home/Home/Home";
 import HowWork from "../Pages/HowWorkThisSIte/HowWork";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome"
-import AccountCreator from "../Pages/UserForm/AccountCreator/AccountCreator";
-import StudentRegister from "../Pages/UserForm/Register/StudentRegister/StudentRegister";
+import Register from "../Pages/UserForm/Register/Register";
+import Login from "../Pages/UserForm/Login/Login";
+ 
 const routes = createBrowserRouter([
     {
         path: "/",
@@ -31,13 +32,12 @@ const routes = createBrowserRouter([
             },
             {
                 path:"register",
-                element:<AccountCreator/>,
-                children:[
-                    {
-                        path:":type",
-                        element:<StudentRegister/>
-                    }
-                ]
+                element:<Register/>,
+                 
+            },{
+                path:"login",
+                element:<Login/>,
+                 
             }
              
         ]
