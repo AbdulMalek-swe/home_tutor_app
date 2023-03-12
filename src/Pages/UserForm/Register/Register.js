@@ -2,13 +2,16 @@ import axios from 'axios';
 import React from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
+import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { Link,   useNavigate } from 'react-router-dom';
 
 import './Register.css'
 import { inputClass, labelClass } from './RegisterType';
 const Register = () => {
-    const { register, handleSubmit, control } = useForm();
-    const term = useWatch({ control, name: "term" });
+    const { register, handleSubmit, control } =  useForm({
+        show: true
+    });
+    const { term, show } = useWatch({ control });
     const navigate = useNavigate()
     const onSubmit = data => {
         delete data.term;
@@ -54,11 +57,16 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="relative my-6">
-                                <input id="id-l04" type="password" required name="message" placeholder="task message" className={inputClass} {...register("password")}
+                                <input id="id-l04" type={show ? "text" : "password"} required name="message" placeholder="task message" className={inputClass} {...register("password")}
                                 />
                                 <label htmlFor="id-l04" className={labelClass}
                                 >
                                     Password *
+                                </label>
+                                <label className="cursor-pointer label  absolute top-0 right-0 text-center">
+                                    {show ? <BsEyeSlashFill className='mt-2' /> : <BsEyeFill className='mt-2' />}
+                                    <input type="checkbox"
+                                        hidden   {...register("show")} />
                                 </label>
                             </div>
                             <div className='flex  w-full max-w-xs'>

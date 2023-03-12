@@ -15,7 +15,9 @@ const VerifyUser = () => {
         if(data.phone){
             axios.post("http://20.127.2.107:8080/v1/user/verify-phone", {code:data.phone,email:'abdulmalek.swe.585@gmail.com'})
             .then(res => {
-                navigate("/login")
+                if(res.data.phone_verified){
+                    navigate("/login")
+                }
             })
             .catch(error => {
                 toast.error(<h1>Invalid token</h1>)

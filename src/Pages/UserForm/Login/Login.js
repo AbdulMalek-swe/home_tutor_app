@@ -11,15 +11,15 @@ const Login = () => {
     const { register, handleSubmit, control } = useForm({
         show: true
     });
-    const { term, show } = useWatch({ control });
+    const {  show } = useWatch({ control });
     const navigate = useNavigate()
     const onSubmit = data => {
-        axios.post("http://20.127.2.107:8080/v1/user/login", data )
+        axios.post("http://20.127.2.107:8080/v1/user/login", data)
             .then(res => {
                 navigate("/")
             })
             .catch(error => {
-                toast.error(<h1>{error?.response?.data?.message?error?.response?.data?.message:error?.response?.data }</h1>)
+                toast.error(<h1>{error?.response?.data?.message ? error?.response?.data?.message : error?.response?.data}</h1>)
             })
     }
     return (
@@ -37,32 +37,32 @@ const Login = () => {
                                     Phone *
                                 </label>
                             </div>
-                             
-                            <div className="relative my-6">      
-                                    <input id="id-l04" type={show ? "text" : "password"} required name="message" placeholder="task message" className={inputClass} {...register("password")}
-                                    />
-                                    <label htmlFor="id-l04" className={labelClass}
-                                    >
-                                        Password *
-                                    </label>
-                                    <label className="cursor-pointer label  absolute top-0 right-0 text-center">
-                                        {show ? <BsEyeSlashFill className='mt-2'/> : <BsEyeFill className='mt-2'/>}
-                                        <input type="checkbox"
-                                            hidden   {...register("show")} />
-                                    </label>
-                            </div>                 
-                        <div className='flex  '>
-                        <button  type="submit" className='bg-[#0F2182]   p-2 text-[#fff] my-3 flex items-center'> <BiLogIn className='mx-1'/> <span className='pr-1'>Login</span> </button>
-                             <Link to="/forget-password">
-                           <span  type="submit" className= '  p-2   my-3  text-center text-[#E86103] hover:underline hover:text-[#007bff]'>Forgot Password?</span>
-                           </Link>
-                        </div>
-                     <div className='text-center'>
-                     <span  className="text-[#E86103] ">Have No Account ?</span>
-                       <Link to="/register">
-                           <span  type="submit" className= '  p-2   my-3  text-center  hover:underline  text-[#007bff]'>Register Here</span>
-                           </Link>
-                     </div>
+
+                            <div className="relative my-6">
+                                <input id="id-l04" type={show ? "text" : "password"} required name="message" placeholder="task message" className={inputClass} {...register("password")}
+                                />
+                                <label htmlFor="id-l04" className={labelClass}
+                                >
+                                    Password *
+                                </label>
+                                <label className="cursor-pointer label  absolute top-0 right-0 text-center">
+                                    {show ? <BsEyeSlashFill className='mt-2' /> : <BsEyeFill className='mt-2' />}
+                                    <input type="checkbox"
+                                        hidden   {...register("show")} />
+                                </label>
+                            </div>
+                            <div className='flex  '>
+                                <button type="submit" className='bg-[#0F2182]   p-2 text-[#fff] my-3 flex items-center'> <BiLogIn className='mx-1' /> <span className='pr-1'>Login</span> </button>
+                                <Link to="/forget-password">
+                                    <span type="submit" className='  p-2   my-3  text-center text-[#E86103] hover:underline hover:text-[#007bff]'>Forgot Password?</span>
+                                </Link>
+                            </div>
+                            <div className='text-center'>
+                                <span className="text-[#E86103] ">Have No Account ?</span>
+                                <Link to="/register">
+                                    <span type="submit" className='  p-2   my-3  text-center  hover:underline  text-[#007bff]'>Register Here</span>
+                                </Link>
+                            </div>
                         </form>
                     </div>
                 </div>

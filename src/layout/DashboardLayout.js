@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Main from './Main';
 import img from '../assets/grameenphone.jpg'
@@ -9,8 +9,10 @@ import { FaCopy, FaEdit } from 'react-icons/fa';
 
 import { CgProfile } from 'react-icons/cg';
 import DashboardHome from '../Pages/Dashboard/DashboardHome/DashboardHome';
+import { AuthContext } from '../Context/AuthProvider';
 
 const DashboardLayout = () => {
+    const {userType} = useContext(AuthContext)
     const [copied, setCopied] = useState(false);
     const value = "nice to meet u"
     const notify = () => {
@@ -36,7 +38,7 @@ const DashboardLayout = () => {
                                 <img src={img} alt="loading..." className='h-24 w-24 rounded-full border-2 border-sky-400 z-50 mx-4' />
                                 <div  >
                                     <h1 >abdul</h1>
-                                    <p>Teacher ID : 1658</p>
+                                    <p>{userType} ID : 1658</p>
                                 </div>
                             </div>
                             <div className='flex items-center justify-center'>
