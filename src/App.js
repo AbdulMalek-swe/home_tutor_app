@@ -6,6 +6,7 @@ import routes from "./Routes/routes";
 function App() {
   return (
     <div>
+      {/* <input type="file"/> */}
       <Toaster
         position="top-right"
         reverseOrder={false} />

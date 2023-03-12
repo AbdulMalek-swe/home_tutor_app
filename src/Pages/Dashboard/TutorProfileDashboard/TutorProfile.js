@@ -21,91 +21,91 @@ const TutorProfile = () => {
             <div>
                 <div className="overflow-x-auto">
 
-                    <div class="relative overflow-x-auto">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <div className="relative overflow-x-auto">
+                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <tbody>
-                                <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
-                                </tr>   <tr class="bg-white border   ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </tr>   <tr className="bg-white border   ">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4 border-l">
+                                    <td className="px-6 py-4 border-l">
                                         Sliver
                                     </td>
                                 </tr>

@@ -1,18 +1,20 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm, useWatch } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link,   useNavigate } from 'react-router-dom';
 
 import './Register.css'
 import { inputClass, labelClass } from './RegisterType';
 const Register = () => {
     const { register, handleSubmit, control } = useForm();
     const term = useWatch({ control, name: "term" });
+    const navigate = useNavigate()
     const onSubmit = data => {
         delete data.term;
         axios.post("http://20.127.2.107:8080/v1/user/register", { ...data, join_date: "2022-02-19T14:21:00+0200" })
             .then(res => {
                 console.log(res);
+                navigate("/register/verify")
             })
             .catch(err => {
                 console.log(err.message);

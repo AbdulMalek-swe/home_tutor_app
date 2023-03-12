@@ -5,8 +5,8 @@ import img from '../assets/grameenphone.jpg'
 import { AiOutlineAlignCenter, AiOutlineDashboard } from 'react-icons/ai';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { toast } from 'react-hot-toast';
-import { FaCopy } from 'react-icons/fa';
- 
+import { FaCopy, FaEdit } from 'react-icons/fa';
+
 import { CgProfile } from 'react-icons/cg';
 import DashboardHome from '../Pages/Dashboard/DashboardHome/DashboardHome';
 
@@ -14,7 +14,6 @@ const DashboardLayout = () => {
     const [copied, setCopied] = useState(false);
     const value = "nice to meet u"
     const notify = () => {
-
         toast.success(<h1>{value}</h1>);
     };
     return (
@@ -25,9 +24,9 @@ const DashboardLayout = () => {
                 <div className="drawer-content flex flex-col items-center justify-start">
                     <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
                     <label htmlFor="my-drawer-2" className="btn btn-    lg:hidden "
-                    > <AiOutlineAlignCenter/>  </label>
-                     
-                  
+                    > <AiOutlineAlignCenter />  </label>
+
+ 
                 </div>
                 <div className="drawer-side  pt-12    ">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -43,7 +42,7 @@ const DashboardLayout = () => {
                             <div className='flex items-center justify-center'>
                                 <ul className='pt-20 '>
                                     <div className='pt-8'>
-                                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center   mb-2">JGX</button>
+                                        <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center   mb-2">JGX</button>
                                         <CopyToClipboard text={value}
                                             onCopy={() => setCopied(true)}>
                                             <span> </span>
@@ -53,23 +52,39 @@ const DashboardLayout = () => {
                                             <button className='text-white  bg-amber-400 from-purple-600 to-blue-500   focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center my-2 mr-[-5px]  mb-2' onClick={notify}> <FaCopy /> </button>
                                         </CopyToClipboard>
                                     </div>
-                                    <Link to="/tutor " className='flex items-center mt-5 text-blue-800 text-lg'>
+                                    <Link to="/tutor" className='flex items-center mt-5 text-blue-800 text-lg'>
                                         <AiOutlineDashboard />
                                         <button className='mx-2  hover:underline hover:opacity-90'>
                                             Dashboard </button>
                                     </Link>
+                                    <Link to="/student" className='flex items-center mt-5 text-blue-800 text-lg'>
+                                        <AiOutlineDashboard />
+                                        <button className='mx-2  hover:underline hover:opacity-90'>
+                                           st Dashboard </button>
+                                    </Link>
                                     <Link to="/tutor/profile" className='flex items-center mt-2 text-blue-800 text-lg mt-5'>
-                                    <CgProfile/>
+                                        <CgProfile />
                                         <button className='mx-2  hover:underline hover:opacity-90'>
                                             Profile </button>
                                     </Link>
-
+                                    <Link to="/student/profile" className='flex items-center mt-2 text-blue-800 text-lg mt-5'>
+                                        <CgProfile />
+                                        <button className='mx-2  hover:underline hover:opacity-90'>
+                                             st Profile </button>
+                                    </Link>
+                                    <Link to="/student/profile/edit" className='flex items-center mt-2 text-blue-800 text-lg mt-5'>
+                                        <FaEdit />
+                                        <button className='mx-2  hover:underline hover:opacity-90'>
+                                             st Edit Profile </button>
+                                    </Link>
+                                 
                                 </ul>
                             </div>
                         </div>
                     </ul>
                 </div>
             </div>
+            <Outlet/>
         </div>
     );
 };

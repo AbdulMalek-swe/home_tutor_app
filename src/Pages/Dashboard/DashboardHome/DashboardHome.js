@@ -15,6 +15,7 @@ const DashboardHome = () => {
           </div>
         </div>
       </div>
+       
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-3 gap-4 justify-center items-center  '>
         <div className='border-l-4  border-[#0998c9] rounded   my-[12px] shadow-md' style={{ boxShadow: "2px 2px 10px -6px rgb(0 0 0)" }}>
           <Link to="" >
@@ -24,7 +25,7 @@ const DashboardHome = () => {
                 <p>UPDATE</p>
               </div>
               <div className=' '>
-                <AiFillEdit className='text-xl' /> 
+                <AiFillEdit className='text-xl' />
               </div>
             </div>
           </Link>
@@ -66,9 +67,9 @@ const DashboardHome = () => {
             </div>
           </Link>
         </div>
-        
+
       </div>
-        <SearchJobList/>
+      <SearchJobList />
     </div>
   );
 };

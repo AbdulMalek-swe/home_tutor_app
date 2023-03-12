@@ -12,8 +12,7 @@ const Login = () => {
     });
     const { term, show } = useWatch({ control });
     const onSubmit = data => {
-        delete data.term;
-        axios.post("http://20.127.2.107:8080/v1/user/register", { ...data, join_date: "2022-02-19T14:21:00+0200" })
+        axios.post("http://20.127.2.107:8080/v1/user/login", data )
             .then(res => {
                 console.log(res);
             })
@@ -36,6 +35,14 @@ const Login = () => {
                                     Phone *
                                 </label>
                             </div>
+                              <div className="relative my-6">
+                                <input id="id-l03" type="text"  name="message" placeholder="task message" className={inputClass}  {...register("username")}
+                                />
+                                <label htmlFor="id-l03" className={labelClass}
+                                >
+                                    Username *
+                                </label>
+                            </div>
                             <div className="relative my-6">      
                                     <input id="id-l04" type={show ? "text" : "password"} required name="message" placeholder="task message" className={inputClass} {...register("password")}
                                     />
@@ -51,7 +58,7 @@ const Login = () => {
                             </div>                 
                         <div className='flex  '>
                         <button  type="submit" className='bg-[#0F2182]   p-2 text-[#fff] my-3 flex items-center'> <BiLogIn className='mx-1'/> <span className='pr-1'>Login</span> </button>
-                             <Link to="">
+                             <Link to="/forget-password">
                            <span  type="submit" className= '  p-2   my-3  text-center text-[#E86103] hover:underline hover:text-[#007bff]'>Forgot Password?</span>
                            </Link>
                         </div>

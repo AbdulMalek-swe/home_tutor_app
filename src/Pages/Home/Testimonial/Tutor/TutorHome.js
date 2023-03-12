@@ -11,7 +11,7 @@ const TutorHome = () => {
                 <span className=' border-b-2   border-[#e7582a] w-20 block' ></span>
             </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  gap-4 justify-center items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  gap-4 justify-center items-center">
                 <TutorTestIMonialLeft  />
                 <TutorTestimonialRight/>
               </div>
