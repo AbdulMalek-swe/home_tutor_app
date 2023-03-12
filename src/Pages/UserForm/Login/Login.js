@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm, useWatch } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { BiLogIn } from 'react-icons/bi';
 import { BsEyeSlashFill, BsEyeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
@@ -16,8 +17,9 @@ const Login = () => {
             .then(res => {
                 console.log(res);
             })
-            .catch(err => {
-                console.log(err.message);
+            .catch(error => {
+                console.log(error.response.data.message  );
+                toast.error(<h1>{error.response.data.message }</h1>)
             })
     }
     return (
@@ -25,7 +27,7 @@ const Login = () => {
             <div className="backgrounds">
                 <div className='flex items-center justify-center'>
                     <div className='bg-white   my-6'>
-                        <h1 className='text-center bg-[#0F2182] p-2 text-[#fff]'>Register</h1>
+                        <h1 className='text-center bg-[#0F2182] p-2 text-[#fff]'>Login</h1>
                         <form onSubmit={handleSubmit(onSubmit)} className="p-9">
                             <div className="relative my-6">
                                 <input id="id-l02" type="tel" required name="message" placeholder="task message" className={inputClass}  {...register("phone")}
@@ -35,14 +37,7 @@ const Login = () => {
                                     Phone *
                                 </label>
                             </div>
-                              <div className="relative my-6">
-                                <input id="id-l03" type="text"  name="message" placeholder="task message" className={inputClass}  {...register("username")}
-                                />
-                                <label htmlFor="id-l03" className={labelClass}
-                                >
-                                    Username *
-                                </label>
-                            </div>
+                             
                             <div className="relative my-6">      
                                     <input id="id-l04" type={show ? "text" : "password"} required name="message" placeholder="task message" className={inputClass} {...register("password")}
                                     />

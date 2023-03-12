@@ -28,7 +28,7 @@ const VerifyUser = () => {
             <div className="backgrounds">
                 <div className='flex items-center justify-center'>
                     <div className='bg-white   my-6'>
-                        <h1 className='text-center bg-[#0F2182] p-2 text-[#fff]'>Register</h1>
+                        <h1 className='text-center bg-[#0F2182] p-2 text-[#fff]'>Login</h1>
                         <form onSubmit={handleSubmit(onSubmit)} className="p-9">
                             <div className="relative my-6">
                                 <input id="id-l02" type="tel" required name="message" placeholder="task message" className={inputClass}  {...register("phone")}
