@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm, useWatch } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { Link,   useNavigate } from 'react-router-dom';
 
 import './Register.css'
@@ -16,8 +17,8 @@ const Register = () => {
                 console.log(res);
                 navigate("/register/verify")
             })
-            .catch(err => {
-                console.log(err.message);
+            .catch(error => {
+                toast.error(<h1>{error?.response?.data?.message?error?.response?.data?.message:error?.response?.data }</h1>)
             })
     }
     return (

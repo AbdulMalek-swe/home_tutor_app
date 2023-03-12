@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm, useWatch } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { BiLogIn } from 'react-icons/bi';
 import { BsEyeSlashFill, BsEyeFill } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
@@ -14,11 +15,10 @@ const VerifyUser = () => {
         if(data.phone){
             axios.post("http://20.127.2.107:8080/v1/user/verify-phone", {code:data.phone,email:'abdulmalek.swe.585@gmail.com'})
             .then(res => {
-                console.log(res);
                 navigate("/login")
             })
-            .catch(err => {
-                console.log(err.message);
+            .catch(error => {
+                toast.error(<h1>Invalid token</h1>)
             })
         }
        

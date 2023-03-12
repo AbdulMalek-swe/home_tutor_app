@@ -4,7 +4,7 @@ import { useForm, useWatch } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { BiLogIn } from 'react-icons/bi';
 import { BsEyeSlashFill, BsEyeFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { inputClass, labelClass } from '../Register/RegisterType';
 
 const Login = () => {
@@ -12,14 +12,14 @@ const Login = () => {
         show: true
     });
     const { term, show } = useWatch({ control });
+    const navigate = useNavigate()
     const onSubmit = data => {
         axios.post("http://20.127.2.107:8080/v1/user/login", data )
             .then(res => {
-                console.log(res);
+                navigate("/")
             })
             .catch(error => {
-                console.log(error.response.data.message  );
-                toast.error(<h1>{error.response.data.message }</h1>)
+                toast.error(<h1>{error?.response?.data?.message?error?.response?.data?.message:error?.response?.data }</h1>)
             })
     }
     return (
